@@ -13,5 +13,5 @@
  *= require_tree .
  *= require_self
  *= require bulma/css/bulma
- *= require font-awesome/scss
+ *= require font-awesome/css
  */
