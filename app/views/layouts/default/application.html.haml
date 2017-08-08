@@ -1,11 +1,19 @@
 !!!
 %html
-  %head
-    %title= current_account.name
-    = stylesheet_link_tag    'default/application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
-    = csrf_meta_tags
-  %body
-    .container
-      = render 'default/shared/navigation'
-      = yield
+	%head
+		%title= current_account.name
+		= stylesheet_link_tag    'default/application', media: 'all', 'data-turbolinks-track' => true
+		= javascript_include_tag 'application', 'data-turbolinks-track' => true
+		= csrf_meta_tags
+		%meta{:name => "viewport", :content => "width=device-width; initial-scale=1.0; maximum-scale=1.0;"}
+	%body
+		.container
+			.menu
+				= render 'default/shared/navigation'
+			%section.section 
+				.container
+					.content.has-text-centered
+						= yield
+			%footer.footer
+				.container
+					.content.has-text-centered
